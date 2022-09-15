@@ -1,0 +1,23 @@
+2) You have to given s String and you have to capitalise first two character of the string
+Given a full name and you to capitalise the name appropriately
+
+Sample Input :
+John bob
+
+Constraint
+ 0<=len(s)<=1000
+The String consists of alphanumeric character and spaces
+
+Sample Output :
+JOhn BOb
+
+def capitalize_first_last_letters(str1):
+     str1 = result = str1.title()
+     result =  ""
+     for word in str1.split():
+        result += word[:-1] + word[-1].upper() + " "
+     return result[:-1]  
+     
+print(capitalize_first_last_letters("john bob"))
+
+output: JohN BoB
